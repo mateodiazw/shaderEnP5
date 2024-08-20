@@ -4,7 +4,7 @@ let mandelbrot;
 
 // Load the shader and create a p5.Shader object.
 function preload() {
-  mandelbrot = loadShader('assets/shader.vert', 'assets/elShader.frag');
+  mandelbrot = loadShader('./assets/shader.vert', './assets/elShader.frag');
 }
 
 function setup() {
