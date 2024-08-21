@@ -24,7 +24,9 @@ void main() {
   vec2 mouseAdjusted = vec2((u_mouse.x / u_resolution.x - 0.5) * 4.5, (u_mouse.y / u_resolution.y - 0.5) *2.);
    
 
-    st -= mouseAdjusted;
+   //st -= mouseAdjusted;
+      st -= mouseAdjusted;
+
     float pct = 0.0;
 
     
@@ -39,12 +41,12 @@ void main() {
 
     vec3 color = vec3(0.);
 
-    vec3 colorFinal = paleta(length(st-sin(u_time)*.9) + (sin( u_time* .05 +11.5)));
-
+   // vec3 colorFinal = paleta(length(st-mouseAdjusted) * (sin( u_time* .02 +5. )));
+ vec3 colorFinal = paleta(length(st-sin(u_time)*.9) + (sin( u_time* .05 +11.5)));
     for(int i = 0; i < 3; i++) {
         pct -= 5.;
 
-        d = sin(pct * 15. - u_time * 2.5) + (sin(u_time * 0.5));
+        d = sin(pct * 15. - u_time * 2.5) + (sin(u_time * .5));
 
         d = .5 / abs(d);
         z -= 5.;
